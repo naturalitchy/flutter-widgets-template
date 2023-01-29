@@ -81,6 +81,12 @@ class MyApp extends StatelessWidget {
             onLongPress: () {
               print('Long PRESS!!');
             },
+            onPanStart: (scrollData) {
+              print('가로 또는 세로로 스크롤 했다!!');
+            },
+            onPanUpdate: (scrollData) {
+              print('scrollData = ${scrollData}');
+            },
             // GestureDetector객체를 아래의 컨테이너로 적용
             child: Container(
               decoration: BoxDecoration(
